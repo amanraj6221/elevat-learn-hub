@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Play, Star, Users, Award } from 'lucide-react';
+import { Play, Users, Award } from 'lucide-react';
 import heroImage from '@/assets/hero-learning.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-hero opacity-10" />
       
@@ -18,21 +18,22 @@ const Hero = () => {
             {/* Badge */}
             <div className="flex">
               <Badge className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30">
-                🚀 AI-Powered Learning Experience
+                🎓 Centralised Student Activity Records
               </Badge>
             </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Learn Without{' '}
+                Smart Student{' '}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Limits
+                  Hub
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Join thousands of learners on ElevatLearn - where AI tutors guide your journey, 
-                expert instructors inspire growth, and every lesson brings you closer to your dreams.
+                A centralized digital platform for Higher Education Institutions to document, track, 
+                and showcase every student’s academic and non-academic achievements — from conferences 
+                and certifications to volunteering and internships.
               </p>
             </div>
 
@@ -42,19 +43,13 @@ const Hero = () => {
                 <div className="w-8 h-8 bg-success/20 rounded-full flex items-center justify-center">
                   <Users className="w-4 h-4 text-success" />
                 </div>
-                <span className="text-sm text-muted-foreground">50K+ Students</span>
+                <span className="text-sm text-muted-foreground">Empowers Students</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-warning/20 rounded-full flex items-center justify-center">
-                  <Star className="w-4 h-4 text-warning" />
+                  <Award className="w-4 h-4 text-warning" />
                 </div>
-                <span className="text-sm text-muted-foreground">4.9/5 Rating</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center">
-                  <Award className="w-4 h-4 text-accent" />
-                </div>
-                <span className="text-sm text-muted-foreground">500+ Courses</span>
+                <span className="text-sm text-muted-foreground">Supports Accreditation</span>
               </div>
             </div>
 
@@ -64,28 +59,17 @@ const Hero = () => {
                 size="lg"
                 className="bg-gradient-primary hover:opacity-90 transition-opacity shadow-glow"
               >
-                Start Learning Free
+                Get Started
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-border hover:bg-secondary/50 transition-colors group"
+                onClick={() => window.open("https://youtu.be/-MhXozNPOeg?si=GYJ28nWtzOHYf-x8", "_blank")}
               >
                 <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
               </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="pt-8">
-              <p className="text-sm text-muted-foreground mb-4">Trusted by learners from:</p>
-              <div className="flex flex-wrap items-center gap-6 opacity-60">
-                {/* Placeholder for company logos */}
-                <div className="text-xs font-medium px-3 py-1 bg-secondary rounded">Google</div>
-                <div className="text-xs font-medium px-3 py-1 bg-secondary rounded">Microsoft</div>
-                <div className="text-xs font-medium px-3 py-1 bg-secondary rounded">Meta</div>
-                <div className="text-xs font-medium px-3 py-1 bg-secondary rounded">Apple</div>
-              </div>
             </div>
           </div>
 
@@ -94,25 +78,9 @@ const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={heroImage}
-                alt="Students learning together with AI-powered tools"
+                alt="Centralised student hub illustration"
                 className="w-full h-auto object-cover"
               />
-              
-              {/* Floating Cards */}
-              <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-lg p-3 shadow-md">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-                  <span className="text-xs font-medium">AI Tutor Active</span>
-                </div>
-              </div>
-              
-              <div className="absolute bottom-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg p-3 shadow-md">
-                <div className="text-xs text-muted-foreground">Progress</div>
-                <div className="text-sm font-semibold">73% Complete</div>
-                <div className="w-16 h-1 bg-secondary rounded-full mt-1">
-                  <div className="w-3/4 h-1 bg-gradient-primary rounded-full" />
-                </div>
-              </div>
             </div>
           </div>
         </div>

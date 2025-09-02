@@ -2,104 +2,98 @@ import { Button } from '@/components/ui/button';
 import CourseCard from './CourseCard';
 
 const Courses = () => {
-  const courses = [
+  const modules = [
     {
-      title: 'Complete Machine Learning Bootcamp with Python',
-      instructor: 'Dr. Sarah Chen',
+      title: 'Academic Records',
+      instructor: 'Verified by Faculty',
       image: '/placeholder.svg',
-      rating: 4.9,
-      students: 12500,
-      duration: '42h',
-      price: '$89.99',
-      originalPrice: '$199.99',
-      level: 'Intermediate' as const,
-      category: 'Data Science'
-    },
-    {
-      title: 'Modern React Development with TypeScript',
-      instructor: 'Marcus Rodriguez',
-      image: '/placeholder.svg',
-      rating: 4.8,
-      students: 8900,
-      duration: '36h',
-      price: '$79.99',
-      originalPrice: '$159.99',
-      level: 'Intermediate' as const,
-      category: 'Web Development'
-    },
-    {
-      title: 'UX Design Fundamentals: From Wireframes to Prototypes',
-      instructor: 'Emily Johnson',
-      image: '/placeholder.svg',
-      rating: 4.9,
-      students: 6700,
-      duration: '28h',
-      price: '$69.99',
-      originalPrice: '$129.99',
+      rating: 5,
+      students: 0,
+      duration: 'Continuous',
+      price: 'Included',
       level: 'Beginner' as const,
-      category: 'Design'
+      category: 'Academics'
     },
     {
-      title: 'Advanced Data Analytics with Python & R',
-      instructor: 'David Park',
+      title: 'Certifications & Online Courses',
+      instructor: 'MOOCs / External Platforms',
       image: '/placeholder.svg',
-      rating: 4.8,
-      students: 5400,
-      duration: '48h',
-      price: '$99.99',
-      originalPrice: '$219.99',
+      rating: 5,
+      students: 0,
+      duration: 'Flexible',
+      price: 'Included',
+      level: 'Intermediate' as const,
+      category: 'Certifications'
+    },
+    {
+      title: 'Club Activities & Volunteering',
+      instructor: 'Student Clubs / NGOs',
+      image: '/placeholder.svg',
+      rating: 5,
+      students: 0,
+      duration: 'Ongoing',
+      price: 'Included',
+      level: 'Beginner' as const,
+      category: 'Extracurriculars'
+    },
+    {
+      title: 'Internships & Leadership Roles',
+      instructor: 'Verified by Institution',
+      image: '/placeholder.svg',
+      rating: 5,
+      students: 0,
+      duration: 'Varies',
+      price: 'Included',
       level: 'Advanced' as const,
-      category: 'Data Science'
+      category: 'Professional'
     },
     {
-      title: 'iOS App Development with Swift',
-      instructor: 'Lisa Wang',
+      title: 'Competitions & Academic Contests',
+      instructor: 'College / University Events',
       image: '/placeholder.svg',
-      rating: 4.7,
-      students: 4200,
-      duration: '52h',
-      price: '$94.99',
-      originalPrice: '$189.99',
+      rating: 5,
+      students: 0,
+      duration: 'Seasonal',
+      price: 'Included',
       level: 'Intermediate' as const,
-      category: 'Mobile Dev'
+      category: 'Competitions'
     },
     {
-      title: 'Digital Marketing Mastery: SEO, PPC & Analytics',
-      instructor: 'Tom Jackson',
+      title: 'Community Service',
+      instructor: 'Community / Govt Programs',
       image: '/placeholder.svg',
-      rating: 4.8,
-      students: 7800,
-      duration: '32h',
-      price: '$74.99',
-      originalPrice: '$149.99',
+      rating: 5,
+      students: 0,
+      duration: 'Ongoing',
+      price: 'Included',
       level: 'Beginner' as const,
-      category: 'Marketing'
+      category: 'Service'
     }
   ];
 
   const categories = [
-    'All Courses',
-    'Data Science',
-    'Web Development',
-    'Design',
-    'Mobile Dev',
-    'Marketing',
-    'Business'
+    'All Records',
+    'Academics',
+    'Certifications',
+    'Extracurriculars',
+    'Internships',
+    'Competitions',
+    'Community Service'
   ];
 
   return (
-    <section id="courses" className="py-20 bg-gradient-secondary">
+    <section id="modules" className="py-20 bg-gradient-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Explore Our{' '}
+            Explore Student{' '}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Course Catalog
+              Activity Records
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover courses designed by industry experts to accelerate your career growth
+            Comprehensive documentation of academic, co-curricular, and professional achievements.
           </p>
         </div>
 
@@ -117,10 +111,10 @@ const Courses = () => {
           ))}
         </div>
 
-        {/* Courses Grid */}
+        {/* Modules Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {courses.map((course) => (
-            <CourseCard key={course.title} {...course} />
+          {modules.map((module) => (
+            <CourseCard key={module.title} {...module} />
           ))}
         </div>
 
@@ -131,7 +125,7 @@ const Courses = () => {
             size="lg"
             className="hover:bg-primary hover:text-primary-foreground transition-colors"
           >
-            Load More Courses
+            Load More
           </Button>
         </div>
       </div>

@@ -1,65 +1,59 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Video, Trophy, MessageSquare, Users, Shield } from 'lucide-react';
+import { LayoutDashboard, ClipboardCheck, CheckCircle, FileText, BarChart2, Link2 } from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Study Companion',
-      description: 'Get personalized help from our AI tutor that understands your learning style and adapts to your pace.',
-      color: 'text-primary'
+      icon: LayoutDashboard,
+      title: 'Dynamic Student Dashboard',
+      description: 'Real-time updates on academic performance, attendance, and credit-based activities.',
     },
     {
-      icon: Video,
-      title: 'HD Video Streaming',
-      description: 'Crystal clear video lessons with adaptive quality that works seamlessly on any device.',
-      color: 'text-accent'
+      icon: ClipboardCheck,
+      title: 'Activity Tracker',
+      description: 'Upload and validate participation in seminars, workshops, online courses, internships, and more.',
     },
     {
-      icon: Trophy,
-      title: 'Earn Certificates',
-      description: 'Showcase your achievements with beautiful certificates that validate your newfound skills.',
-      color: 'text-warning'
+      icon: CheckCircle,
+      title: 'Faculty Approval Panel',
+      description: 'Faculty or admins can approve uploaded records to ensure verified and credible achievements.',
     },
     {
-      icon: MessageSquare,
-      title: 'Interactive Quizzes',
-      description: 'Test your knowledge with engaging quizzes that make learning fun and effective.',
-      color: 'text-success'
+      icon: FileText,
+      title: 'Auto-Generated Digital Portfolio',
+      description: 'Downloadable & shareable verified student portfolio in PDF or web link format.',
     },
     {
-      icon: Users,
-      title: 'Study Groups',
-      description: 'Connect with fellow learners, share insights, and grow together in collaborative groups.',
-      color: 'text-accent'
+      icon: BarChart2,
+      title: 'Analytics & Reporting',
+      description: 'Generate consolidated reports for NAAC, AICTE, NIRF, or internal evaluations with one click.',
     },
     {
-      icon: Shield,
-      title: 'Progress Tracking',
-      description: 'Monitor your learning journey with detailed analytics and personalized recommendations.',
-      color: 'text-primary'
-    }
+      icon: Link2,
+      title: 'Integration Support',
+      description: 'Seamless integration with LMS, ERP, and digital university platforms.',
+    },
   ];
 
   return (
-    <section className="py-20 bg-gradient-secondary">
+    <section id="features" className="py-20 bg-gradient-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Why Choose{' '}
+            Key{' '}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              ElevatLearn?
+              Features
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We've built the most comprehensive learning platform that puts your success first
+            Empowering students, simplifying faculty tasks, and modernizing institutional operations.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <Card 
@@ -69,7 +63,7 @@ const Features = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     {/* Icon */}
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6 text-primary-foreground" />
                     </div>
 

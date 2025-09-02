@@ -7,10 +7,10 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Courses', href: '#courses' },
-    { label: 'Instructors', href: '#instructors' },
-    { label: 'About', href: '#about' },
-    { label: 'Pricing', href: '#pricing' }
+    { label: 'Home', href: '#home' },
+    { label: 'Features', href: '#features' },
+    { label: 'Impact', href: '#impact' },
+    { label: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -23,7 +23,7 @@ const Navigation = () => {
               <BookOpen className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              ElevatLearn
+              Smart Student Hub
             </span>
           </div>
 
@@ -45,7 +45,7 @@ const Navigation = () => {
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
-                placeholder="Search courses, instructors..."
+                placeholder="Search activities, records..."
                 className="pl-10 bg-secondary/50 border-0 focus:ring-2 focus:ring-primary/20"
               />
             </div>
@@ -79,7 +79,7 @@ const Navigation = () => {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
-                  placeholder="Search courses..."
+                  placeholder="Search activities..."
                   className="pl-10 bg-secondary/50 border-0"
                 />
               </div>
